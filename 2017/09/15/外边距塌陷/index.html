@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>外边距合并(外边距塌陷) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="相邻块元素垂直外边距的合并当上下相邻的两个块元素相遇时，如果上面的元素有下外边距，下面的元素有上外边距，则它们的距离并不是两者之和，而是两者中的较大者。 解决方案：避免即可。 嵌套块元素垂直外边距的合并对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的较大者，即使父元素的上外边距为零也会发生合并。 解决方案：1. 为父元">
+<meta property="og:type" content="article">
+<meta property="og:title" content="外边距合并(外边距塌陷)">
+<meta property="og:url" content="http://yoursite.com/2017/09/15/外边距塌陷/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="相邻块元素垂直外边距的合并当上下相邻的两个块元素相遇时，如果上面的元素有下外边距，下面的元素有上外边距，则它们的距离并不是两者之和，而是两者中的较大者。 解决方案：避免即可。 嵌套块元素垂直外边距的合并对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的较大者，即使父元素的上外边距为零也会发生合并。 解决方案：1. 为父元">
+<meta property="og:updated_time" content="2017-09-15T06:35:34.282Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="外边距合并(外边距塌陷)">
+<meta name="twitter:description" content="相邻块元素垂直外边距的合并当上下相邻的两个块元素相遇时，如果上面的元素有下外边距，下面的元素有上外边距，则它们的距离并不是两者之和，而是两者中的较大者。 解决方案：避免即可。 嵌套块元素垂直外边距的合并对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的较大者，即使父元素的上外边距为零也会发生合并。 解决方案：1. 为父元">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-外边距塌陷" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/15/外边距塌陷/" class="article-date">
+  <time datetime="2017-09-15T03:43:10.760Z" itemprop="datePublished">2017-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      外边距合并(外边距塌陷)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="相邻块元素垂直外边距的合并"><a href="#相邻块元素垂直外边距的合并" class="headerlink" title="相邻块元素垂直外边距的合并"></a>相邻块元素垂直外边距的合并</h3><pre><code>当上下相邻的两个块元素相遇时，如果上面的元素有下外边距，下面的元素有上外边距，则它们的距离并不是两者之和，而是两者中的较大者。
+解决方案：避免即可。
+</code></pre><h3 id="嵌套块元素垂直外边距的合并"><a href="#嵌套块元素垂直外边距的合并" class="headerlink" title="嵌套块元素垂直外边距的合并"></a>嵌套块元素垂直外边距的合并</h3><pre><code>对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的较大者，即使父元素的上外边距为零也会发生合并。
+解决方案：1. 为父元素定义1px的上边框或上内边距；
+          2. 为父元素添加overflow:hidden;
+          3. 给父元素设置padding,而不要给子元素设上外边距。
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/15/外边距塌陷/" data-id="cj7mnky0p000284hydcs5slew" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/09/15/清除浮动/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          清除浮动的方式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/08/盒子模型/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">盒子边框 border</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/15/清除浮动/">清除浮动的方式</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/15/外边距塌陷/">外边距合并(外边距塌陷)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/08/盒子模型/">盒子边框 border</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/07/常见浏览器/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/23/haha/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

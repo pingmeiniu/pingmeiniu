@@ -61,10 +61,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-清除浮动" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/08/23/test/" class="article-date">
-  <time datetime="2017-08-23T06:02:23.940Z" itemprop="datePublished">2017-08-23</time>
+    <a href="/2017/09/15/清除浮动/" class="article-date">
+  <time datetime="2017-09-15T06:40:48.977Z" itemprop="datePublished">2017-09-15</time>
 </a>
     
   </div>
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/23/test/">��������</a>
+      <a class="article-title" href="/2017/09/15/清除浮动/">清除浮动的方式</a>
     </h1>
   
 
@@ -83,15 +83,157 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="����"><a href="#����" class="headerlink" title="����"></a>����</h2><ul>
-<li>�б�1</li>
-<li>�б�2</li>
+        <h3 id="语法：-选择器-clear-both"><a href="#语法：-选择器-clear-both" class="headerlink" title="语法： 选择器{clear:both;}"></a>语法： 选择器{clear:both;}</h3><h3 id="清除方式"><a href="#清除方式" class="headerlink" title="清除方式"></a>清除方式</h3><ul>
+<li>额外标签法(不常使用)<br>  在浮动元素末尾添加一个空标签：<div style="clear:both"></div></li>
+<li>父级元素添加overflow属性<br>  给父级元素添加overflow:hidden/auto/scroll;三种都可实现。</li>
+<li>after伪元素清除浮动<br>  语法：<pre><code>.clearfix:after{ content:&quot;.&quot;,
+                 display:block,
+                 height:0,
+                 visibility:hidden,
+                 clear:both;
+                }
+.clearfix { *zoom:1;}  ie6、7专有
+</code></pre></li>
+<li>空余字符法<br>  语法：<pre><code>.clearfix:after{ content:&quot;\200B&quot;,
+                 display:block,
+                 height:0,
+                 clear:both;
+                }
+.clearfix { *zoom:1;}  ie6、7专有
+</code></pre></li>
+<li>双伪元素法<br>  语法：<pre><code>.clearfix:after,.clearfix:after{ content:&quot; &quot;,
+                                 display:table,
+                                }
+.clearfix:after{ clear:both;}
+.clearfix { *zoom:1;}  ie6、7专有
+</code></pre></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/23/test/" data-id="cj6om7q8c0000nshy90y8vo40" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/09/15/清除浮动/" data-id="cj7mnky1l000484hy4b7rbm7b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-外边距塌陷" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/15/外边距塌陷/" class="article-date">
+  <time datetime="2017-09-15T03:43:10.760Z" itemprop="datePublished">2017-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/15/外边距塌陷/">外边距合并(外边距塌陷)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="相邻块元素垂直外边距的合并"><a href="#相邻块元素垂直外边距的合并" class="headerlink" title="相邻块元素垂直外边距的合并"></a>相邻块元素垂直外边距的合并</h3><pre><code>当上下相邻的两个块元素相遇时，如果上面的元素有下外边距，下面的元素有上外边距，则它们的距离并不是两者之和，而是两者中的较大者。
+解决方案：避免即可。
+</code></pre><h3 id="嵌套块元素垂直外边距的合并"><a href="#嵌套块元素垂直外边距的合并" class="headerlink" title="嵌套块元素垂直外边距的合并"></a>嵌套块元素垂直外边距的合并</h3><pre><code>对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的较大者，即使父元素的上外边距为零也会发生合并。
+解决方案：1. 为父元素定义1px的上边框或上内边距；
+          2. 为父元素添加overflow:hidden;
+          3. 给父元素设置padding,而不要给子元素设上外边距。
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/15/外边距塌陷/" data-id="cj7mnky0p000284hydcs5slew" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-盒子模型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/08/盒子模型/" class="article-date">
+  <time datetime="2017-09-08T02:20:49.861Z" itemprop="datePublished">2017-09-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/08/盒子模型/">盒子边框 border</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="语法-border-border-width-border-style-border-color"><a href="#语法-border-border-width-border-style-border-color" class="headerlink" title="语法 border:border-width border-style border-color;"></a>语法 border:border-width border-style border-color;</h3><pre><code>border-style 取值：
+    - none 没有边框(默认)
+    - solid 单实线
+    - dashed 虚线
+    - dotted 点线
+    - double 双实线
+注意：border-style 为必须设置的属性，否则默认为none,显示不了没有边框
+</code></pre><h4 id="关于边框的初始化"><a href="#关于边框的初始化" class="headerlink" title="关于边框的初始化"></a>关于边框的初始化</h4><pre><code>1. 表单的边框清零
+原因：因为每种浏览器的表单默认边框颜色不同，样式不同，因此需要将默认的清零，自己定义样式和颜色，从而达到浏览器兼容的效果。
+语法：input{ border:0; }
+2. 表格的边框
+语法：table{ border-collapse:collapse;border-spacing:0; }
+    border-collapse:collapse; 表示表格的边框合并在一起
+    border-spacing:0;  表示边框之间的间距为零
+3. 轮廓线outline
+原因：由于链接获得焦点后有虚线、文本框或者文本域获得焦点时，谷歌等浏览器会有蓝色边框，为了浏览器兼容故将它们的轮廓线取消。
+语法：input{outline:none;}  a:focus{outline:none;}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/08/盒子模型/" data-id="cj7mnky2g000584hywrr0ojvb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-常见浏览器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/07/常见浏览器/" class="article-date">
+  <time datetime="2017-09-07T08:50:57.427Z" itemprop="datePublished">2017-09-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/07/常见浏览器/" data-id="cj7mnkxw6000084hy18b4hwlg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -113,130 +255,130 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="JavaScript-�߼������׵�4��"><a href="#JavaScript-�߼������׵�4��" class="headerlink" title="JavaScript �߼������׵�4��"></a>JavaScript �߼������׵�4��</h1><h2 id="֪ʶ��"><a href="#֪ʶ��" class="headerlink" title="֪ʶ��"></a>֪ʶ��</h2><ul>
-<li>̰����</li>
+        <h1 id="JavaScript-高级与进阶第4天"><a href="#JavaScript-高级与进阶第4天" class="headerlink" title="JavaScript 高级与进阶第4天"></a>JavaScript 高级与进阶第4天</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>贪吃蛇</li>
 </ul>
-<h2 id="����"><a href="#����" class="headerlink" title="����"></a>����</h2><h2 id="��ϰ"><a href="#��ϰ" class="headerlink" title="��ϰ"></a>��ϰ</h2><h2 id="���縴ϰ"><a href="#���縴ϰ" class="headerlink" title="���縴ϰ"></a>���縴ϰ</h2><h2 id="���縴ϰ-1"><a href="#���縴ϰ-1" class="headerlink" title="���縴ϰ"></a>���縴ϰ</h2><h2 id="�ܽ�"><a href="#�ܽ�" class="headerlink" title="�ܽ�"></a>�ܽ�</h2><h2 id="L��"><a href="#L��" class="headerlink" title="Ŀ��"></a>Ŀ��</h2><h2 id="����-1"><a href="#����-1" class="headerlink" title="����"></a>����</h2><h2 id="����˲���"><a href="#����˲���" class="headerlink" title="����˲���"></a>����˲���</h2><h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><p>hexo ��һ����̬�������������ܰ���һ����������һ����վ��</p>
+<h2 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h2><h2 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h2><h2 id="上午复习"><a href="#上午复习" class="headerlink" title="上午复习"></a>上午复习</h2><h2 id="下午复习"><a href="#下午复习" class="headerlink" title="下午复习"></a>下午复习</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h2 id="搭建个人博客"><a href="#搭建个人博客" class="headerlink" title="搭建个人博客"></a>搭建个人博客</h2><h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><p>hexo 是一个静态博客生成器，能帮你一个命名生成一个网站。</p>
 <ol>
-<li>��װ node ����</li>
+<li>安装 node 环境</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- nodejs.org ��վ�� node ����������</div><div class="line">- ���صõ���װ��</div><div class="line">- ��һ����һ����װ����</div></pre></td></tr></table></figure>
-<p>ȷ�ϻ������ǻ����� node ������</p>
-<p>���� cmd��</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- nodejs.org 网站有 node 的下载链接</div><div class="line">- 下载得到安装包</div><div class="line">- 下一步下一步安装即可</div></pre></td></tr></table></figure>
+<p>确认机器上是或否有 node 环境：</p>
+<p>打开 cmd：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure>
 <ol>
-<li>��װ git</li>
+<li>安装 git</li>
 </ol>
 <p><a href="https://git-scm.com/" target="_blank" rel="external">https://git-scm.com/</a></p>
-<p>��װ��ʽ��ֱ����һ��-&gt;��һ�� ��װ����</p>
+<p>安装方式：直接下一步-&gt;下一步 安装即可</p>
 <ol>
-<li>��װ hexo</li>
+<li>安装 hexo</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli --global</div></pre></td></tr></table></figure>
-<p>����������ͨ�� <code>hexo --version</code> �����鿴�Ƿ���װ�ɹ���</p>
+<p>接下来可以通过 <code>hexo --version</code> 命令查看是否安装成功：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">hexo-cli: 1.0.3</div><div class="line">os: Windows_NT 10.0.14393 win32 x64</div><div class="line">http_parser: 2.7.0</div><div class="line">node: 7.10.0</div><div class="line">v8: 5.5.372.43</div><div class="line">uv: 1.11.0</div><div class="line">zlib: 1.2.11</div><div class="line">ares: 1.10.1-DEV</div><div class="line">modules: 51</div><div class="line">openssl: 1.0.2k</div><div class="line">icu: 58.2</div><div class="line">unicode: 9.0</div><div class="line">cldr: 30.0.3</div><div class="line">tz: 2016j</div></pre></td></tr></table></figure>
 <ol>
-<li>���ɲ���</li>
+<li>生成博客</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># hexo ��������ִ�и�����������Ŀ¼����һ��ָ�����Ƶ�Ŀ¼�ļ�</span></div><div class="line">hexo init ����Ŀ¼����</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># hexo 会帮你在执行该命名所处的目录生成一个指定名称的目录文件</span></div><div class="line">hexo init 博客目录名称</div></pre></td></tr></table></figure>
 <ol>
-<li>����Ԥ������</li>
+<li>启动预览博客</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
 <ol>
-<li>ע�� github �˺�</li>
+<li>注册 github 账号</li>
 </ol>
 <ul>
 <li><a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
-<li>ע��ҳ�棺<a href="https://github.com/join" target="_blank" rel="external">https://github.com/join</a></li>
-<li>�����û��������롢����</li>
-<li>Ȼ�����Լ�����������ȡ�ʼ�������֤</li>
+<li>注册页面：<a href="https://github.com/join" target="_blank" rel="external">https://github.com/join</a></li>
+<li>填入用户名、密码、邮箱</li>
+<li>然后在自己的邮箱中收取邮件激活验证</li>
 </ul>
 <ol>
-<li>����һ�������Ĳֿ�</li>
+<li>创建一个具名的仓库</li>
 </ol>
-<p>������һ��Ҫȷ���������侭����֤�ˡ�</p>
-<p>�������Ͻǵģ�+ ѡ�� -&gt; create repository</p>
-<p>������ע��githubʱ�����û���.github.io</p>
+<p>到这里一定要确保你的邮箱经过验证了。</p>
+<p>点击右上角的：+ 选择 -&gt; create repository</p>
+<p>起名：注册github时候的用户名.github.io</p>
 <ol>
-<li>�Ѳ��ͷ����йܵ� github ��</li>
+<li>把博客发布托管到 github 上</li>
 </ol>
 <p>lpzdemayun<br>heima123456</p>
-<p>��������ʾ����</p>
+<p>线上码云示例：</p>
 <ol>
-<li>ע�������˺�</li>
-<li>�����ֿ⣨��Ҫ��ʼ�� README��</li>
-<li>�õ��ֿ���ַ <a href="https://git.oschina.net/lpzdemayun/lpzdemayun.git" target="_blank" rel="external">https://git.oschina.net/lpzdemayun/lpzdemayun.git</a></li>
+<li>注册码云账号</li>
+<li>创建仓库（不要初始化 README）</li>
+<li>拿到仓库地址 <a href="https://git.oschina.net/lpzdemayun/lpzdemayun.git" target="_blank" rel="external">https://git.oschina.net/lpzdemayun/lpzdemayun.git</a></li>
 </ol>
-<p>���ز���׼����</p>
-<p>�� <code>_config.yml</code> �м���</p>
+<p>本地操作准备：</p>
+<p>在 <code>_config.yml</code> 中加入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://lpzdemayun:heima123456@git.oschina.net/lpzdemayun/lpzdemayun.git</div></pre></td></tr></table></figure>
-<p>Ȼ����װһ���������ٷ����Ĺ��ߣ�</p>
+<p>然后安装一个用来快速发布的工具：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>Ȼ����ִ��</p>
+<p>然后：执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<p>���ͳɹ�֮�����������ϲֿ⣬�ҵ� ���� -&gt; Pages -&gt; ��������</p>
-<p>Ȼ�����������������ĸ���ַ�Ϳ����ˡ�</p>
-<p>��������ֻ��Ҫд�������£�ÿ�η�����ʱ����һ�����</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ������Ŀ¼�ṹ��Ȼ�󷢲�</span></div><div class="line">hexo generate --deploy</div></pre></td></tr></table></figure>
-<h2 id="��ܽ�"><a href="#��ܽ�" class="headerlink" title="��ܽ�"></a>��ܽ�</h2><p>���صĲ�����</p>
+<p>推送成功之后，来到线上仓库，找到 服务 -&gt; Pages -&gt; 开启服务</p>
+<p>然后他会告诉你访问哪个地址就可以了。</p>
+<p>接下来你只需要写你的文章，每次发布的时候敲一个命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 先生成目录结构，然后发布</span></div><div class="line">hexo generate --deploy</div></pre></td></tr></table></figure>
+<h2 id="搭建总结"><a href="#搭建总结" class="headerlink" title="搭建总结"></a>搭建总结</h2><p>本地的操作：</p>
 <ul>
-<li>��װ node ����</li>
-<li>��װ git</li>
-<li>��װ hexo<ul>
+<li>安装 node 环境</li>
+<li>安装 git</li>
+<li>安装 hexo<ul>
 <li><code>npm install --global hexo-cli</code></li>
 </ul>
 </li>
-<li>�ڱ������ɲ���<ul>
-<li><code>hexo init ����Ŀ¼����</code></li>
+<li>在本地生成博客<ul>
+<li><code>hexo init 博客目录名称</code></li>
 </ul>
 </li>
-<li>�ڱ���Ԥ��<ul>
+<li>在本地预览<ul>
 <li><code>hexo server</code></li>
 </ul>
 </li>
 </ul>
-<p>׼���������ϲֿ⣺</p>
+<p>准备码云线上仓库：</p>
 <ul>
-<li>ע�������˺�<ul>
-<li>ע�⣺��Ҫ������֤����</li>
+<li>注册码云账号<ul>
+<li>注意：需要单独验证邮箱</li>
 </ul>
 </li>
-<li>����һ���ֿ�<ul>
-<li>�ֿ�������������</li>
+<li>创建一个仓库<ul>
+<li>仓库的名字随便起</li>
 </ul>
 </li>
-<li>�ڲֿ�ҳ���ҵ� ���� -&gt; Pages<ul>
-<li>ѡ����������</li>
+<li>在仓库页面找到 服务 -&gt; Pages<ul>
+<li>选择启动服务</li>
 </ul>
 </li>
-<li>�õ��ֿ���ַ<ul>
+<li>拿到仓库地址<ul>
 <li><a href="https://git.oschina.net/lpzdemayun/lpzdemayun.git" target="_blank" rel="external">https://git.oschina.net/lpzdemayun/lpzdemayun.git</a></li>
 </ul>
 </li>
 </ul>
-<p>׼������������</p>
+<p>准备发布工作：</p>
 <ul>
-<li>�ڱ��ذ�װ��������<ul>
+<li>在本地安装发布工具<ul>
 <li><code>npm install hexo-deployer-git --save</code></li>
 </ul>
 </li>
-<li>�޸� <code>_config.yml</code> �ļ�������</li>
+<li>修改 <code>_config.yml</code> 文件，加入</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ע�⣺�������ֶ��ұ��ǰ��ǵ� : �ұߴ�һ���ո�</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://lpzdemayun:heima123456@git.oschina.net/lpzdemayun/lpzdemayun.git</div></pre></td></tr></table></figure>
-<p>������</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">注意：下面的字段右边是半角的 : 右边带一个空格</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://lpzdemayun:heima123456@git.oschina.net/lpzdemayun/lpzdemayun.git</div></pre></td></tr></table></figure>
+<p>最后：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate --deploy</div></pre></td></tr></table></figure>
-<p>��������ֱ�ӷ��ʣ�</p>
+<p>接下来，直接访问：</p>
 <p><a href="http://lpzdemayun.oschina.io" target="_blank" rel="external">http://lpzdemayun.oschina.io</a></p>
-<p>�����Ĺ��̴�����֮�����Ժ�ÿ��д��������Ҫ������ֱ�Ӵ��������У����룺</p>
+<p>上面的过程处理完之后，以后每次写完文章想要发布，直接打开命令行，输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate --deploy</div></pre></td></tr></table></figure>
-<p>���ɡ�</p>
+<p>即可。</p>
 <p>lipengzhou@itcast.cn</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/23/haha/" data-id="cj6ols1l50000mohyqg6drzba" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/23/haha/" data-id="cj7mnky0a000184hyewzqmvzw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +423,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/23/hello-world/" data-id="cj6ols1ma0001mohys87xvfl1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/23/hello-world/" data-id="cj7mnky15000384hy9hrcrtdi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -308,7 +450,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
     </div>
   </div>
 
@@ -321,15 +463,23 @@
       <ul>
         
           <li>
-            <a href="/2017/08/23/test/">��������</a>
+            <a href="/2017/09/15/清除浮动/">清除浮动的方式</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/15/外边距塌陷/">外边距合并(外边距塌陷)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/08/盒子模型/">盒子边框 border</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/07/常见浏览器/">(no title)</a>
           </li>
         
           <li>
             <a href="/2017/08/23/haha/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/23/hello-world/">Hello World</a>
           </li>
         
       </ul>
