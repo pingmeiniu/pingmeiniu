@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,83 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-git相关命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/16/git相关命令/" class="article-date">
+  <time datetime="2017-09-16T02:58:09.176Z" itemprop="datePublished">2017-09-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/16/git相关命令/">git��������</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="git��������������"><a href="#git��������������" class="headerlink" title="git��������������"></a>git��������������</h3><ol>
+<li>����Ŀ¼<br> .git���ڵ�Ŀ¼�������洢�´������ļ����޸ĵ��ļ���</li>
+<li>�ݴ���<br> ���ڴ洢����Ʒ��</li>
+<li>���زֿ�<br> �洢������Ŀ�Ŀ��գ����浱ǰ�ݴ����е�һ�ݴ��롣<br> һ�����ڴ洢��Ʒ����Ʒ���ջ����ߡ�</li>
+</ol>
+<h3 id="git�l����ĸ�״̬"><a href="#git�l����ĸ�״̬" class="headerlink" title="git�ļ����ĸ�״̬"></a>git�ļ����ĸ�״̬</h3><ol>
+<li>δ����<br> �´������ļ���״̬</li>
+<li>���ݴ�<br> λ���ݴ������ļ���״̬</li>
+<li>���ύ<br> λ�ڱ��زֿ����ļ���״̬</li>
+<li>���޸�<br> �ݴ������ļ��ֱ��޸���ʱ��״̬</li>
+</ol>
+<h2 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h2><ul>
+<li>git config ���ñ��زֿ�<br> git config –global user.name   �����û���<br> git config –global user.email  �����û�����</li>
+<li>git config –list  �鿴�û���Ϣ</li>
+<li>git init  ��ʼ�����زֿ�<br>  git init –bare  ��ʼ��Զ�ֿ̲�</li>
+<li>git status  �鿴��ǰ�ֿ���״̬</li>
+<li>git add �ļ���  ������Ŀ¼�е��ļ����ӵ��ݴ���<br>  git add * ��-A  ��ʾ�������ļ����ӵ��ݴ���</li>
+<li>git commit -m ‘��ע��Ϣ’  ���ݴ������ļ����ӵ����زֿ�</li>
+<li>git log �鿴���زֿ����ύ��ʷ(����commit id)<br>  <img src="../images/gitlog.png" alt=""><h4 id="�ع�����"><a href="#�ع�����" class="headerlink" title="�ع�����"></a>�ع�����</h4></li>
+<li><p>git rm –cached �ļ��б�   ɾ���ݴ���ָ�����ļ�</p>
+</li>
+<li><p>git reset �ع�����<br>  git reset –hard �ع����زֿ��Ŀ��գ���ʹ�ÿ��ո����ݴ����͹���Ŀ¼<br>  git reset –soft ֻ�ع����زֿ��Ŀ���<br>  git reset –mixed ��Ĭ�ϣ��ع����زֿ��Ŀ��պ��ݴ������������ǹ���Ŀ¼<br>  �����÷���<br>  �ع�����һ���ύ���ص������ڶ����ύ��<br>  git reset –hard HEAD^ �� git reset –hard �����ڶ��ε�commit id</p>
+</li>
+<li><p>git checkout �ļ��� �ع��ݴ����Ѿ��޸ĵ����ݣ��ݴ����޸ĺ������޸ĵĲ���ʱʹ�ã�<br>  git checkout .   ��ʾ�ع��ݴ��������ļ��������޸ģ�����ʹ�á�</p>
+</li>
+</ul>
+<h4 id="��֧����"><a href="#��֧����" class="headerlink" title="��֧����"></a>��֧����</h4><ul>
+<li>git branch    �鿴��֧</li>
+<li>git branch ��֧����     ������֧</li>
+<li>git checkout ��֧����     �л���֧</li>
+<li>git checkout -b ��֧����      �������л�����֧</li>
+<li>git merge ��֧����     �ϲ���֧</li>
+<li>git branch -d ��֧����   ɾ����֧����֧�����ϲ���֮�����ܱ�ɾ����</li>
+<li>git branch -D ��֧����    ǿ��ɾ����֧</li>
+</ul>
+<h4 id="Զ�ֿ̲��Ĳ���"><a href="#Զ�ֿ̲��Ĳ���" class="headerlink" title="Զ�ֿ̲��Ĳ���"></a>Զ�ֿ̲��Ĳ���</h4><ul>
+<li>git init –bare   ��ʼ��Զ�ֿ̲�</li>
+<li>git clone Զ�ֿ̲���ַ ��Ŀ���ƣ���ѡ������   ��¡Զ�ֿ̲�����Ŀ</li>
+<li>git push Զ�ֿ̲���ַ ���ط�֧����    �ϴ����뵽Զ�ֿ̲�</li>
+<li>git pull Զ�ֿ̲���ַ Զ�̷�֧����     ���ش��뵽���ط�֧</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/16/git相关命令/" data-id="cj7mxf1aq0000dwhyrusnwuml" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-清除浮动" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -112,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/15/清除浮动/" data-id="cj7mnky1l000484hy4b7rbm7b" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/09/15/清除浮动/" data-id="cj7mnky1l000484hy4b7rbm7b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -154,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/15/外边距塌陷/" data-id="cj7mnky0p000284hydcs5slew" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/09/15/外边距塌陷/" data-id="cj7mnky0p000284hydcs5slew" class="article-share-link">Share</a>
       
       
     </footer>
@@ -207,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/08/盒子模型/" data-id="cj7mnky2g000584hywrr0ojvb" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/09/08/盒子模型/" data-id="cj7mnky2g000584hywrr0ojvb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -233,7 +310,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/07/常见浏览器/" data-id="cj7mnkxw6000084hy18b4hwlg" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/09/07/常见浏览器/" data-id="cj7mnkxw6000084hy18b4hwlg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -385,7 +462,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/23/搭建hexo/" data-id="cj7mo15ew0000dchyymhy5vev" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/23/搭建hexo/" data-id="cj7mo15ew0000dchyymhy5vev" class="article-share-link">Share</a>
       
       
     </footer>
@@ -430,7 +507,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/23/hello-world/" data-id="cj7mnky15000384hy9hrcrtdi" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/23/hello-world/" data-id="cj7mnky15000384hy9hrcrtdi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -465,9 +542,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/09/16/git相关命令/">git��������</a>
+          </li>
         
           <li>
             <a href="/2017/09/15/清除浮动/">清除浮动的方式</a>
@@ -485,10 +566,6 @@
             <a href="/2017/09/07/常见浏览器/">(no title)</a>
           </li>
         
-          <li>
-            <a href="/2017/08/23/搭建hexo/">搭建个人博客hexo</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -502,7 +579,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
