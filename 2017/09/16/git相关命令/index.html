@@ -12,7 +12,9 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="git的三个工作区域 工作目录 .git所在的目录，用来存储新创建的文件和修改的文件。 暂存区 用于存储半成品。 本地仓库 存储整个项目的快照，保存当前暂存区中的一份代码。 一般用于存储成品，成品最终会上线。  git文件的四个状态 未跟踪 新创建的文件的状态 已暂存 位于暂存区的文件的状态 已提交 位于本地仓库的文件的状态 已修改 暂存区的文件又被修改了时的状态  常见命令 git config">
 <meta property="og:image" content="http://yoursite.com/2017/09/16/images/gitlog.png">
-<meta property="og:updated_time" content="2017-09-16T06:26:24.214Z">
+<meta property="og:image" content="http://yoursite.com/2017/09/16/images/gitremote-v.png">
+<meta property="og:image" content="http://yoursite.com/2017/09/16/images/gitremoteshow.png">
+<meta property="og:updated_time" content="2017-09-16T08:36:30.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git相关命令">
 <meta name="twitter:description" content="git的三个工作区域 工作目录 .git所在的目录，用来存储新创建的文件和修改的文件。 暂存区 用于存储半成品。 本地仓库 存储整个项目的快照，保存当前暂存区中的一份代码。 一般用于存储成品，成品最终会上线。  git文件的四个状态 未跟踪 新创建的文件的状态 已暂存 位于暂存区的文件的状态 已提交 位于本地仓库的文件的状态 已修改 暂存区的文件又被修改了时的状态  常见命令 git config">
@@ -125,8 +127,28 @@
 <h4 id="远程仓库的操作"><a href="#远程仓库的操作" class="headerlink" title="远程仓库的操作"></a>远程仓库的操作</h4><ul>
 <li>git init –bare   初始化远程仓库</li>
 <li>git clone 远程仓库地址 项目名称（可选参数）   克隆远程仓库的项目</li>
-<li>git push 远程仓库地址 本地分支名称    上传代码到远程仓库</li>
-<li>git pull 远程仓库地址 远程分支名称     下载代码到本地分支</li>
+<li>git push 远程仓库地址 本地分支名称    上传代码到远程仓库<br>  同一个项目，在第一次push时可以在git push 后面加-u:<pre><code>git push -u 远程仓库地址 本地分支名称
+</code></pre>  之后再push同一项目时，只需要写：git push 即可。下载写git pull 即可。</li>
+<li><p>git pull 远程仓库地址 远程分支名称     下载代码到本地分支</p>
+</li>
+<li><p>给远程仓库地址添加别名<br>  git remote add 别名名称 远程仓库地址</p>
+</li>
+<li>删除远程仓库别名<br>  git remote remove 别名</li>
+<li>查看所有别名<br>  git remote</li>
+<li>重命名远程仓库的别名<br>  git remote rename 原名称 新名称</li>
+<li>查看远程仓库的地址和别名<br>  git remote -v<br>  <img src="../images/gitremote-v.png" alt=""></li>
+<li><p>查看远程仓库的信息<br>  git remote show 别名<br>  <img src="../images/gitremoteshow.png" alt=""></p>
+</li>
+<li><p>删除远程分支<br>  git push 远程仓库地址 –delete 远程分支名称<br>  或者 git push 远程仓库地址 :远程分支名称</p>
+</li>
+<li><p>保存当前状态<br>  git stash</p>
+</li>
+<li><p>回复之前保存的状态<br>  git stash pop</p>
+</li>
+<li><p>比较差异<br>  git difftool         比较工作区域暂存区的差异<br>  git difftool 某次commit id        比较当前与特定的某次提交的差异<br>  git difftool 某次commit id 某次commit id       比较特定的某两次提交的差异<br>  git difftool 分支名称       比较与分支的差异</p>
+</li>
+<li><p><strong> 在项目根目录下创建一个.gitignore文件，可将不希望提交的文件名写在这个.gitignore文件中，可以实现该文件不上传，不被git管理。</strong></p>
+</li>
 </ul>
 
       
