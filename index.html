@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/16/git相关命令/">git��������</a>
+      <a class="article-title" href="/2017/09/16/git相关命令/">git相关命令</a>
     </h1>
   
 
@@ -83,46 +83,46 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="git��������������"><a href="#git��������������" class="headerlink" title="git��������������"></a>git��������������</h3><ol>
-<li>����Ŀ¼<br> .git���ڵ�Ŀ¼�������洢�´������ļ����޸ĵ��ļ���</li>
-<li>�ݴ���<br> ���ڴ洢����Ʒ��</li>
-<li>���زֿ�<br> �洢������Ŀ�Ŀ��գ����浱ǰ�ݴ����е�һ�ݴ��롣<br> һ�����ڴ洢��Ʒ����Ʒ���ջ����ߡ�</li>
+        <h3 id="git的三个工作区域"><a href="#git的三个工作区域" class="headerlink" title="git的三个工作区域"></a>git的三个工作区域</h3><ol>
+<li>工作目录<br> .git所在的目录，用来存储新创建的文件和修改的文件。</li>
+<li>暂存区<br> 用于存储半成品。</li>
+<li>本地仓库<br> 存储整个项目的快照，保存当前暂存区中的一份代码。<br> 一般用于存储成品，成品最终会上线。</li>
 </ol>
-<h3 id="git�l����ĸ�״̬"><a href="#git�l����ĸ�״̬" class="headerlink" title="git�ļ����ĸ�״̬"></a>git�ļ����ĸ�״̬</h3><ol>
-<li>δ����<br> �´������ļ���״̬</li>
-<li>���ݴ�<br> λ���ݴ������ļ���״̬</li>
-<li>���ύ<br> λ�ڱ��زֿ����ļ���״̬</li>
-<li>���޸�<br> �ݴ������ļ��ֱ��޸���ʱ��״̬</li>
+<h3 id="git文件的四个状态"><a href="#git文件的四个状态" class="headerlink" title="git文件的四个状态"></a>git文件的四个状态</h3><ol>
+<li>未跟踪<br> 新创建的文件的状态</li>
+<li>已暂存<br> 位于暂存区的文件的状态</li>
+<li>已提交<br> 位于本地仓库的文件的状态</li>
+<li>已修改<br> 暂存区的文件又被修改了时的状态</li>
 </ol>
-<h2 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h2><ul>
-<li>git config ���ñ��زֿ�<br> git config –global user.name   �����û���<br> git config –global user.email  �����û�����</li>
-<li>git config –list  �鿴�û���Ϣ</li>
-<li>git init  ��ʼ�����زֿ�<br>  git init –bare  ��ʼ��Զ�ֿ̲�</li>
-<li>git status  �鿴��ǰ�ֿ���״̬</li>
-<li>git add �ļ���  ������Ŀ¼�е��ļ����ӵ��ݴ���<br>  git add * ��-A  ��ʾ�������ļ����ӵ��ݴ���</li>
-<li>git commit -m ‘��ע��Ϣ’  ���ݴ������ļ����ӵ����زֿ�</li>
-<li>git log �鿴���زֿ����ύ��ʷ(����commit id)<br>  <img src="../images/gitlog.png" alt=""><h4 id="�ع�����"><a href="#�ع�����" class="headerlink" title="�ع�����"></a>�ع�����</h4></li>
-<li><p>git rm –cached �ļ��б�   ɾ���ݴ���ָ�����ļ�</p>
+<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><ul>
+<li>git config 配置本地仓库<br> git config –global user.name   配置用户名<br> git config –global user.email  配置用户邮箱</li>
+<li>git config –list  查看用户信息</li>
+<li>git init  初始化本地仓库<br>  git init –bare  初始化远程仓库</li>
+<li>git status  查看当前仓库的状态</li>
+<li>git add 文件名  将工作目录中的文件添加到暂存区<br>  git add * 或-A  表示将所有文件添加到暂存区</li>
+<li>git commit -m ‘备注信息’  将暂存区的文件添加到本地仓库</li>
+<li>git log 查看本地仓库的提交历史(包括commit id)<br>  <img src="../images/gitlog.png" alt=""><h4 id="回滚操作"><a href="#回滚操作" class="headerlink" title="回滚操作"></a>回滚操作</h4></li>
+<li><p>git rm –cached 文件列表   删除暂存区指定的文件</p>
 </li>
-<li><p>git reset �ع�����<br>  git reset –hard �ع����زֿ��Ŀ��գ���ʹ�ÿ��ո����ݴ����͹���Ŀ¼<br>  git reset –soft ֻ�ع����زֿ��Ŀ���<br>  git reset –mixed ��Ĭ�ϣ��ع����زֿ��Ŀ��պ��ݴ������������ǹ���Ŀ¼<br>  �����÷���<br>  �ع�����һ���ύ���ص������ڶ����ύ��<br>  git reset –hard HEAD^ �� git reset –hard �����ڶ��ε�commit id</p>
+<li><p>git reset 回滚快照<br>  git reset –hard 回滚本地仓库的快照，并使用快照覆盖暂存区和工作目录<br>  git reset –soft 只回滚本地仓库的快照<br>  git reset –mixed （默认）回滚本地仓库的快照和暂存区，但不覆盖工作目录<br>  特殊用法：<br>  回滚最后一次提交（回到倒数第二次提交）<br>  git reset –hard HEAD^ 或 git reset –hard 倒数第二次的commit id</p>
 </li>
-<li><p>git checkout �ļ��� �ع��ݴ����Ѿ��޸ĵ����ݣ��ݴ����޸ĺ������޸ĵĲ���ʱʹ�ã�<br>  git checkout .   ��ʾ�ع��ݴ��������ļ��������޸ģ�����ʹ�á�</p>
+<li><p>git checkout 文件名 回滚暂存区已经修改的内容（暂存区修改后发现修改的不对时使用）<br>  git checkout .   表示回滚暂存区所有文件的所有修改，谨慎使用。</p>
 </li>
 </ul>
-<h4 id="��֧����"><a href="#��֧����" class="headerlink" title="��֧����"></a>��֧����</h4><ul>
-<li>git branch    �鿴��֧</li>
-<li>git branch ��֧����     ������֧</li>
-<li>git checkout ��֧����     �л���֧</li>
-<li>git checkout -b ��֧����      �������л�����֧</li>
-<li>git merge ��֧����     �ϲ���֧</li>
-<li>git branch -d ��֧����   ɾ����֧����֧�����ϲ���֮�����ܱ�ɾ����</li>
-<li>git branch -D ��֧����    ǿ��ɾ����֧</li>
+<h4 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h4><ul>
+<li>git branch    查看分支</li>
+<li>git branch 分支名称     创建分支</li>
+<li>git checkout 分支名称     切换分支</li>
+<li>git checkout -b 分支名称      创建并切换到分支</li>
+<li>git merge 分支名称     合并分支</li>
+<li>git branch -d 分支名称   删除分支（分支必须合并过之后才能被删除）</li>
+<li>git branch -D 分支名称    强制删除分支</li>
 </ul>
-<h4 id="Զ�ֿ̲��Ĳ���"><a href="#Զ�ֿ̲��Ĳ���" class="headerlink" title="Զ�ֿ̲��Ĳ���"></a>Զ�ֿ̲��Ĳ���</h4><ul>
-<li>git init –bare   ��ʼ��Զ�ֿ̲�</li>
-<li>git clone Զ�ֿ̲���ַ ��Ŀ���ƣ���ѡ������   ��¡Զ�ֿ̲�����Ŀ</li>
-<li>git push Զ�ֿ̲���ַ ���ط�֧����    �ϴ����뵽Զ�ֿ̲�</li>
-<li>git pull Զ�ֿ̲���ַ Զ�̷�֧����     ���ش��뵽���ط�֧</li>
+<h4 id="远程仓库的操作"><a href="#远程仓库的操作" class="headerlink" title="远程仓库的操作"></a>远程仓库的操作</h4><ul>
+<li>git init –bare   初始化远程仓库</li>
+<li>git clone 远程仓库地址 项目名称（可选参数）   克隆远程仓库的项目</li>
+<li>git push 远程仓库地址 本地分支名称    上传代码到远程仓库</li>
+<li>git pull 远程仓库地址 远程分支名称     下载代码到本地分支</li>
 </ul>
 
       
@@ -547,7 +547,7 @@
       <ul>
         
           <li>
-            <a href="/2017/09/16/git相关命令/">git��������</a>
+            <a href="/2017/09/16/git相关命令/">git相关命令</a>
           </li>
         
           <li>
